@@ -1,0 +1,11 @@
+<article class="post">
+  <div class="title">
+    <a href="{{post_url}}" target="_blank">{{title}}</a>
+    <span>({{format_url post_url}})</span>
+  </div>
+  <div class="meta">
+    Order created on: {{format_date created_at}}<br />
+    Order created by: {{user.username}}<br />
+    <a href="/post/{{id}}">{{comments.length}} {{format_plural "Transaction Detail" comments.length}}</a>
+  </div>
+</article>

@@ -1,0 +1,8 @@
+<center><h1>Sales History</h1></center>
+<ol class="post-list">
+  {{#each posts as |post|}}
+  <li>
+    {{> post-info post }}
+  </li>
+  {{/each}}
+</ol>

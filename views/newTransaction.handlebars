@@ -1,0 +1,43 @@
+<section>
+  <h2>New Order</h2>
+  <form class="new-post-form">
+    <div>
+      <label for="post-title">Customer Name</label>
+      <input type="text" id="post-title" name="post-title" />
+    </div>
+    <div>
+      {{!-- <label for="post-url">Link</label>
+      <input id="post-url" name="post-url" /> --}}
+      <label for="post-url">Select Package</label>
+      <select name="post-url" id="post-url">
+        <optgroup label="Regular Orders">
+          <option value="50 Masks - $15.99">50 Masks - $15.99</option>
+          <option value="100 Masks - $29.99">100 Masks - $29.99</option>
+          <option value="200 Masks - $39.99">100 Masks - $29.99</option>
+        </optgroup>
+        <optgroup label="Bulk Orders">
+          <option value="5000 Masks - $499.99">1000 Masks - $199.99</option>
+          <option value="10000 Masks - $799.99">2000 Masks - $299.99</option>
+          <option value="20000 Masks - $1200.00">2000 Masks - $299.99</option>
+        </optgroup>
+      </select>
+    </div>
+    <button type="submit" class="btn">Create Order</button>
+  </form>
+</section>
+
+{{#if posts.length}}
+<section>
+  <h2>Order History</h2>
+  <ol>
+    {{#each posts as |post|}}
+    <li>
+      {{> post-info post}}
+      {{!-- <a href="/newTransaction/edit/{{post.id}}" class="edit-link">Edit post</a> --}}
+    </li>
+    {{/each}}
+  </ol>
+</section>
+{{/if}}
+
+<script src="/javascript/add-post.js"></script>
